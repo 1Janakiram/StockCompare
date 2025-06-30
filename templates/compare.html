@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+
+{% block main %}
+    <form action="/compare" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="stock1" placeholder="Stock1" type="text">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="stock2" placeholder="Stock2" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+
+    </form>
+
+
+{% endblock %}
+

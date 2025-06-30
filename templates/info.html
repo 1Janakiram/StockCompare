@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+
+{% block main %}
+<form action="/info" method="post">
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="stock1" placeholder="Stock1" type="text">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="stock2" placeholder="Stock2" type="text">
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+<style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td, tr {
+      border: 1px solid black;
+      padding: 5px;
+      text-align: left;
+    }
+    th {
+      text-align: center;
+      background-color: rgb(127, 89, 89);
+    }
+  </style>
+<table>
+    <thead>
+      <tr>
+        <th>Info</th>
+        <th>{{name1}}</th>
+        <th>{{name2}}</th>
+      </tr>
+    </thead>
+    <tbody>
+
+        {% for key in info1.keys() %}
+        <tr>
+          <td>{{ key }}</td>
+          <td>{{ info1[key]['Value'] }}</td>
+          <td>{{ info2[key]['Value'] }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+
+{% endblock %}

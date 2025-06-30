@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+
+{% block main %}
+    <style>
+        h4{
+            color:red;
+        }
+    </style>
+    <form action="/signup" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="password" placeholder="Password" type="password">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="confirmation" placeholder="Password(again)" type="password">
+        </div>
+
+        <button class="btn btn-primary" type="submit">Submit</button>
+
+    </form>
+
+    <h4 >{{msg}}</h4>
+
+
+{% endblock %}
